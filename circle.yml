@@ -10,5 +10,5 @@ test:
 
 notify:
   webhooks:
-    - url: http://tyo.to
+    - url: http://tyo.to/test
 
