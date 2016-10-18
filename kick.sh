@@ -12,10 +12,13 @@ TRAVIS_RESPONSE=`curl -s -X POST \
                 -d "{\"github_token\":\"$GH_TOKEN\"}"`
 TRAVIS_TOKEN=`echo $TRAVIS_RESPONSE | cut -d'"' -f4 | cut -d'"' -f3`
 if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
-  body='{
-  "request": {
-    "branch":\"$KICK_BRANCH\"
-  }}'
+  body << EOS
+  {
+    "request": {
+      "branch":"$KICK_BRANCH"
+    }
+  }
+  EOS
 
   curl -s -X POST \
     -H "Content-Type: application/json" \
@@ -23,5 +26,6 @@ if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
     -H "Travis-API-Version: 3" \
     -H "Authorization: token $TRAVIS_TOKEN" \
     -d "$body" \
-    https://api.travis-ci.org/repo/nasneg%2FAndroid-SampleApps/requests
+    https://api.travis-ci.org/repo/nasneg%2FAndroid-SampleApps/requests \
+    -verbose
 fi
