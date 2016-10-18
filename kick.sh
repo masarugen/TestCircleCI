@@ -27,6 +27,5 @@ EOS
     -H "Travis-API-Version: 3" \
     -H "Authorization: token $TRAVIS_TOKEN" \
     -d "$body" \
-    https://api.travis-ci.org/repo/nasneg%2FAndroid-SampleApps/requests \
-    -verbose
+    https://api.travis-ci.org/repo/nasneg%2FAndroid-SampleApps/requests
 fi
