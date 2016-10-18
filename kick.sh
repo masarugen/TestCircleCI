@@ -14,7 +14,7 @@ TRAVIS_TOKEN=`echo $TRAVIS_RESPONSE | cut -d'"' -f4 | cut -d'"' -f3`
 if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
   body='{
   "request": {
-    "branch":"$KICK_BRANCH"
+    "branch":\"$KICK_BRANCH\"
   }}'
 
   curl -s -X POST \
