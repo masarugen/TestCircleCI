@@ -4,6 +4,10 @@ machine:
   timezone:
     Asia/Tokyo
 
+test:
+  override:
+    - echo "----- No executable test -----"
+
 notify:
   webhooks:
     - url: http://tyo.to
