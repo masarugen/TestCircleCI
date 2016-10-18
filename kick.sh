@@ -12,13 +12,13 @@ TRAVIS_RESPONSE=`curl -s -X POST \
                 -d "{\"github_token\":\"$GH_TOKEN\"}"`
 TRAVIS_TOKEN=`echo $TRAVIS_RESPONSE | cut -d'"' -f4 | cut -d'"' -f3`
 if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
-  body << EOS
+  body=`cat << EOS
   {
     "request": {
       "branch":"$KICK_BRANCH"
     }
   }
-  EOS
+  EOS`
 
   curl -s -X POST \
     -H "Content-Type: application/json" \
