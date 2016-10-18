@@ -12,4 +12,5 @@ deployment:
   travis_kick:
     branch: master
     commands:
-      - echo "----- travis kick $HOGE -----"
+      - echo "----- travis kick -----"
+      - ./kick.sh
