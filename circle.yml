@@ -10,4 +10,6 @@ test:
 
 deployment:
   travis_kick:
-    - echo "----- travis kick -----"
+    branch: master
+    commands:
+      - echo "----- travis kick -----"
