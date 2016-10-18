@@ -8,7 +8,6 @@ test:
   override:
     - echo "----- No executable test -----"
 
-notify:
-  webhooks:
-    - url: http://tyo.to/test
-
+deployment:
+  travis_kick:
+    - echo "----- travis kick -----"
