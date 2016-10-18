@@ -18,7 +18,8 @@ if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
       "branch":"$KICK_BRANCH"
     }
   }
-  EOS`
+EOS
+`
 
   curl -s -X POST \
     -H "Content-Type: application/json" \
