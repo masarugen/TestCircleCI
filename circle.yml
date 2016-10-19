@@ -8,12 +8,13 @@ dependencies:
   cache_directories:
     - ~/cache_schema
   override:
-    - ls -l
+    - ./copy_cache.sh
 
 test:
   override:
     - echo "----- No executable test -----"
     - ls -l
+    - ls -l ~/cache_schema/
 
 deployment:
   travis_kick:
@@ -21,6 +22,5 @@ deployment:
     commands:
       - echo "--- schema cache ---"
       - ./check_cache.sh
-      - ./copy_cache.sh
 #      - echo "----- travis kick -----"
 #      - ./kick.sh
