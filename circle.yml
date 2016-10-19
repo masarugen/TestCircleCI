@@ -4,7 +4,7 @@ machine:
   timezone:
     Asia/Tokyo
 
-dependencis:
+dependencies:
   cache_directories:
     - ~/cache_schema
 
