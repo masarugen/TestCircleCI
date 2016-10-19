@@ -4,7 +4,7 @@
 # Circle CIで利用の場合：Project Settings > Environment Variablesに以下の環境変数を追加
 # Travis CIで利用の場合：Settings > Environment Variablesに以下の環境変数を追加
 # GH_TOKEN githubのPersonal access tokenを設定
-# Usage: travis_kick.sh com speee bt-jsonschema2java master
+# Usage: travis_kick.sh org nasneg TestTravisCI master
 # 第１引数：com or org
 # 第２引数：repositoryのowner
 # 第３引数：repository名
