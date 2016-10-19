@@ -7,6 +7,8 @@ machine:
 dependencies:
   cache_directories:
     - ~/cache_schema
+  override:
+    - ls
 
 test:
   override:
