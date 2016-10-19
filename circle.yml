@@ -4,6 +4,10 @@ machine:
   timezone:
     Asia/Tokyo
 
+dependencis:
+  cache_directories:
+    - ~/cache_schema
+
 test:
   override:
     - echo "----- No executable test -----"
@@ -12,5 +16,8 @@ deployment:
   travis_kick:
     branch: master
     commands:
-      - echo "----- travis kick -----"
-      - ./kick.sh
+      - echo "--- schema cache ---"
+      - ./cache_check.sh
+      - ./copy_cache.sh
+#      - echo "----- travis kick -----"
+#      - ./kick.sh
