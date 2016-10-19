@@ -9,8 +9,8 @@ TRAVIS_RESPONSE=`curl -s -f -X POST \
                 -H 'Accept: application/vnd.travis-ci.2+json' \
                 -H 'User-Agent: Travis/1.0' \
                 https://api.travis-ci.org/auth/github \
-                -d "{\"github_token\":\"$GH_TOKEN\"}" \`
-                --verbose
+                -d "{\"github_token\":\"$GH_TOKEN\"}" \
+                --verbose`
 if [ $? -eq 0 ]; then
   TRAVIS_TOKEN=`echo $TRAVIS_RESPONSE | cut -d'"' -f4 | cut -d'"' -f3`
   if [ "$TRAVIS_TOKEN" != 'not a Travis user' ] ; then
