@@ -17,7 +17,7 @@ deployment:
     branch: master
     commands:
       - echo "--- schema cache ---"
-      - ./cache_check.sh
+      - ./check_cache.sh
       - ./copy_cache.sh
 #      - echo "----- travis kick -----"
 #      - ./kick.sh
