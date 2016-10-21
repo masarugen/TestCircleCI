@@ -13,4 +13,4 @@ deployment:
   travis_kick:
     branch: master
     commands:
-      - ./bin/travis_kick.sh org nasneg TestTravisCI master
+      - ./bin/travis_kick.sh org nasneg TestTravisCI develop

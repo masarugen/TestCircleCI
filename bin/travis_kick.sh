@@ -41,5 +41,6 @@ EOS
     exit 1
   fi
 else
+  # TravisCIのトークンが取得できなかったので異常終了
   exit 1
 fi
