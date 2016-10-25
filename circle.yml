@@ -17,6 +17,6 @@ test:
 
 deployment:
   travis_kick:
-    branch: [$TEST_BRANCH]
+    branch: [test]
     commands:
       - ./bin/travis_kick.sh org nasneg test-TravisCI master
